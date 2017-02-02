@@ -8,4 +8,28 @@ class Admin extends CI_Controller {
 		$data['judul']		= 'Dashboard';
 		$this->load->view('Admin/core/content',$data);
 	}
+
+
+	public function gambar()
+	{
+		$data['content']	= 'admin/gambar';
+		$data['judul']		= 'Gambar';
+		$this->load->view('Admin/core/content',$data);
+	}
+
+
+	public function musik()
+	{
+		$data['content']	= 'admin/musik';
+		$data['judul']		= 'Musik';
+		$this->load->view('Admin/core/content',$data);
+	}
+
+
+	public function video()
+	{
+		$data['content']	= 'admin/video';
+		$data['judul']		= 'Video';
+		$this->load->view('Admin/core/content',$data);
+	}
 }

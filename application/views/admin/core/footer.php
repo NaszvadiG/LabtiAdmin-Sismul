@@ -17,8 +17,23 @@
     <!-- FastClick -->
     <script src="<?php echo base_url('assets/vendors/fastclick/lib/fastclick.js')?>"></script>
 
+    <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
 
+    <script>
+      $(document).ready(function(){
+        $('#andika-image-table').DataTable();
+      });
+    </script>
+    <!-- Dika Costum -->
+    <script src="<?php echo base_url('assets/costum/js/costum.js')?>"></script>
     <!-- Custom Theme Scripts -->
     <script src="<?php echo base_url('assets/build/js/custom.min.js')?>"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('#showImg').magnificPopup({type:'image'});
+      });
+    </script>
   </body>
 </html>

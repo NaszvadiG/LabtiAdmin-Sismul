@@ -19,6 +19,8 @@
 
     <!-- Custom Theme Style -->
     <link href="<?php echo base_url('assets/build/css/custom.min.css');?>" rel="stylesheet">
+    <!-- Dika Costum -->
+    <link href="<?php echo base_url('assets/costum/css/costum.css');?>" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -52,16 +54,16 @@
                 <h3>Admin</h3>
                 <ul class="nav side-menu">
                   <li>
-                    <a href="index.html"><i class="fa fa-home"></i> Dashboard</a>
+                    <a href="<?php echo base_url('index.php/admin'); ?>"><i class="fa fa-home"></i> Dashboard</a>
                   </li>
                   <li>
-                    <a href="gambar.html"><i class="fa fa-image"></i> Gambar</a>
+                    <a href="<?php echo base_url('index.php/admin/gambar'); ?>"><i class="fa fa-image"></i> Gambar</a>
                   </li>
                   <li>
-                    <a href="musik.html"><i class="fa fa-music"></i> Musik</a>
+                    <a href="<?php echo base_url('index.php/admin/musik'); ?>"><i class="fa fa-music"></i> Musik</a>
                   </li>
                   <li>
-                    <a href="video.html"><i class="fa fa-film"></i> Video</a>
+                    <a href="<?php echo base_url('index.php/admin/video'); ?>"><i class="fa fa-film"></i> Video</a>
                   </li>
                 </ul>
               </div>
