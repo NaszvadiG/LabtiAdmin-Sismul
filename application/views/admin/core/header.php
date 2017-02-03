@@ -14,13 +14,9 @@
     <!-- Font Awesome -->
     <link href="<?php echo base_url('assets/vendors/font-awesome/css/font-awesome.min.css');?>" rel="stylesheet">
 
-    <!-- bootstrap-daterangepicker -->
-    <link href="<?php echo base_url('assets/vendors/bootstrap-daterangepicker/daterangepicker.css');?>" rel="stylesheet">
-
     <!-- Custom Theme Style -->
     <link href="<?php echo base_url('assets/build/css/custom.min.css');?>" rel="stylesheet">
-    <!-- Dika Costum -->
-    <link href="<?php echo base_url('assets/costum/css/costum.css');?>" rel="stylesheet">
+
   </head>
 
   <body class="nav-md">
