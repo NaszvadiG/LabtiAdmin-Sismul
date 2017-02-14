@@ -89,14 +89,14 @@
         <h4 class="modal-title" id="myModalLabel">Tambah Gambar</h4>
       </div>
       <div class="modal-body">
-      <form action="#" method="post" enctype="multipart/form-data">
+      <form action="<?php echo base_url('admin/uploadGambar')?>" method="post" enctype="multipart/form-data">
         <div class="form-group">
           <label>File : </label>
-          <input type="file" name="fileUpload">
+          <input type="file" name="gambarUpload">
         </div>
         <div class="form-group">
           <label>Nama Foto : </label><br/>
-          <input class="form-control" type="text" name="nama">
+          <input class="form-control" type="text" name="namaFile">
         </div>
         <div class="form-group">
           <label>Deskripsi : </label>

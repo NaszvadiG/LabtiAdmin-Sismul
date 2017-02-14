@@ -34,31 +34,44 @@ class Admin extends CI_Controller {
 	}
 
 	// CRUD FILE
-	public function do_upload()
+	public function uploadGambar()
 	{
-		$user_id=3;
-		// if($this->session->userdata('login')==FALSE)
+
+	// if($this->session->userdata('login')==FALSE)
   //       {
   //           redirect('admin/login');
   //       }
+		$user_id 	= 3;
+		$nama_file	= $this->input->post('namaFile');
+		//buat path
+		$myPath  = "./assets/$user_id/img";
 
-		$config['upload_path']          = './Assets/img/menu/$user_id';
-		$config['allowed_types']        = 'gif|jpg|png';
-		$config['max_size']             = 100;
-		$config['max_width']            = 1024;
-		$config['max_height']           = 768;
+		if(!is_dir($myPath))
+		{
+			mkdir($myPath,0755,TRUE);
+		}
+
+		//Upload file
+		$config['upload_path']		= './Assets/img/menu/';
+		$config['allowed_types']	= 'jpg|png';
+		$config['max_size']			= 2048;
+		$config['file_name']		= $nama_file;
+		// $config['max_width']            = 1024;
+		// $config['max_height']           = 768;
 
 		$this->load->library('upload', $config);
 
-		if ( ! $this->upload->do_upload('userfile'))
+		if ( !$this->upload->do_upload('gambarUpload'))
 			{
 				$error = array('error' => $this->upload->display_errors());
-				$this->load->view('upload_form', $error);
+				$this->load->view('v_uploaderror', $error);
 			}
 		else
 			{
-				$data = array('upload_data' => $this->upload->data());
-				$this->load->view('upload_success', $data);
+				// $data = array('upload_data' => $this->upload->data());
+				// $this->load->view('upload_success', $data);
+
+				redirect('admin/gambar');
 			}
 	}
 }
