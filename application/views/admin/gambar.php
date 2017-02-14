@@ -92,7 +92,11 @@
       <form action="#" method="post" enctype="multipart/form-data">
         <div class="form-group">
           <label>File : </label>
-          <input type="file" name="fileToUpload" id="fileToUpload">
+          <input type="file" name="fileUpload">
+        </div>
+        <div class="form-group">
+          <label>Nama Foto : </label><br/>
+          <input class="form-control" type="text" name="nama">
         </div>
         <div class="form-group">
           <label>Deskripsi : </label>
