@@ -37,7 +37,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>Andika Nugraha</h2>
+                <h2>Admin</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -50,16 +50,13 @@
                 <h3>Admin</h3>
                 <ul class="nav side-menu">
                   <li>
-                    <a href="<?php echo base_url('index.php/admin'); ?>"><i class="fa fa-home"></i> Dashboard</a>
+                    <a href="<?php echo base_url('index.php/admin/welcome'); ?>"><i class="fa fa-home"></i> Dashboard</a>
                   </li>
                   <li>
-                    <a href="<?php echo base_url('index.php/admin/gambar'); ?>"><i class="fa fa-image"></i> Gambar</a>
+                    <a href="<?php echo base_url('index.php/admin/welcome/gambar'); ?>"><i class="fa fa-image"></i> Gambar</a>
                   </li>
                   <li>
-                    <a href="<?php echo base_url('index.php/admin/musik'); ?>"><i class="fa fa-music"></i> Musik</a>
-                  </li>
-                  <li>
-                    <a href="<?php echo base_url('index.php/admin/video'); ?>"><i class="fa fa-film"></i> Video</a>
+                    <a href="<?php echo base_url('index.php/admin/welcome/video'); ?>"><i class="fa fa-film"></i> Video</a>
                   </li>
                 </ul>
               </div>
@@ -82,7 +79,7 @@
 
 
                 <li>
-                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                  <a href="<?php echo base_url() ?>admin/welcome/logout">
                     <i class="fa fa-power-off fa-5x"></i> Logout
                   </a>
 
