@@ -1,0 +1,69 @@
+body {
+	display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+.login{
+	margin-top: 10px;
+	padding: 5px 10px 10px 10px;
+}
+.halaman1{
+	margin: 10px 0px 10px 0px; 
+	padding: 10px;
+}
+.halaman1 img{
+	width: 100%;
+	height: 200px;
+}
+.halaman1 video{
+	background-color: grey;
+	width: 100%;
+	height: 200px;
+}
+.halaman2{
+	margin: 10px 0px 10px 0px; 
+	padding: 10px;
+}
+.halaman3{
+	margin: 10px 0px 10px 0px; 
+	padding: 10px;
+}
+.halaman3 .profile img{
+	width: 100px;
+	height: 100px;
+}
+.halaman3 img{
+	width: 100%;
+	height: 200px;
+}
+.halaman3 video{
+	background-color: grey;
+	width: 100%;
+	height: 200px;
+}
+.modal{
+	padding: 5px;
+}
+.modal .home{
+	padding: 10px;
+}
+.modal .home img{
+	width: 100%;
+	height: 100%;
+}
+.modal .home video{
+	width: 100%;
+	height: 100%;
+}
+.about{
+	margin-top: 10px;
+	padding: 10px;
+}
+.page-footer{
+   	bottom:0;
+   	width:100%;
+   	height: 35%;
+}

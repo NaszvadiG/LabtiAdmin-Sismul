@@ -50,7 +50,7 @@
 
                     <!-- ISI CONTENT  -->
                     <div class="text-center">
-                      <h1>Selamat Datang Andika Nugraha</h1>
+                      <h1>Selamat Datang Admin</h1>
                     </div>
                   </div>
                 </div>

@@ -38,7 +38,7 @@
                       <tbody>
                       <?php $user_id=3; foreach($item as $gambar){?>
                         <tr>
-                          <td><?php echo $gambar->id?></td>
+                          <td><?php echo $gambar->id_post?></td>
                           <td><img height="10%" src="<?php echo base_url("assets/$user_id/img/$gambar->nama_file")?>";"></td>
                           <td><?php echo $gambar->judul?></td>
                           <td><?php echo $gambar->deskripsi?></td>
