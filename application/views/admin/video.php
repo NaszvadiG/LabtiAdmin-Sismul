@@ -13,11 +13,6 @@
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>LABTI Galery <small>Gambar</small></h2>
-                    <div class="nav navbar-right">
-                      <a class="btn btn-primary">
-                        Tambah Gambar
-                      </a>
-                    </div>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -27,47 +22,37 @@
                     <table class="table table-striped projects" id="andika-image-table">
                       <thead>
                         <tr>
-                          <th style="width: 1%">ID</th>
-                          <th style="width: 20%">Nama Gambar</th>
+                          <th>ID</th>
+                          <th>Video</th>
+                          <th>Judul</th>
                           <th>Deskripsi</th>
+                          <th>Upload By</th>
                           <th>Tanggal Upload</th>
-                          <th style="width: 20%">Action</th>
+                          <th>Action</th>
                         </tr>
                       </thead>
                       <tbody>
+                      <?php foreach($item as $video){?>
                         <tr>
-                          <td>#</td>
-                          <td>
-                            <a>Pesamakini Backend UI</a>
-                            <br />
-                            <small>Created 01.01.2015</small>
+                          <td><?php echo $video->id_post?></td>
+                          <td width="20%">
+                            <video height="100px" width="90%" class="responsive-video" controls>
+                                <source src="<?php echo base_url("assets/post/$video->nama_file");?>" type="video/mp4">
+                             </video>
                           </td>
+                          <td width="10%"><?php echo $video->judul?></td>
+
+                          <td><?php echo $video->deskripsi?></td>
+                          <td width="15%"><?php echo $video->name?></td>
                           <td>
-                            <ul class="list-inline">
-                              <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
-                              </li>
-                              <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
-                              </li>
-                              <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
-                              </li>
-                              <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
-                              </li>
-                            </ul>
+                            <?php echo $video->tgl_post?>
                           </td>
-                          <td>
-                            31/1/2017
-                          </td>
-                          <td>
-                            <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Lihat </a>
+                          <td width="15%">
                             <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                            <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Hapus </a>
+                            <a href="<?php echo base_url("admin/welcome/hapusVideo/$video->id_post")?>" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Hapus </a>
                           </td>
                         </tr>
-
+                        <?php } ?>
                       </tbody>
                     </table>
                     <!-- end project list -->

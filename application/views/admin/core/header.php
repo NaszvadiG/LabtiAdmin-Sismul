@@ -56,9 +56,6 @@
                     <a href="<?php echo base_url('index.php/admin/welcome/gambar'); ?>"><i class="fa fa-image"></i> Gambar</a>
                   </li>
                   <li>
-                    <a href="<?php echo base_url('index.php/admin/welcome/musik'); ?>"><i class="fa fa-music"></i> Musik</a>
-                  </li>
-                  <li>
                     <a href="<?php echo base_url('index.php/admin/welcome/video'); ?>"><i class="fa fa-film"></i> Video</a>
                   </li>
                 </ul>

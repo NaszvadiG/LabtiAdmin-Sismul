@@ -2,7 +2,7 @@
         <div class="right_col" role="main">
           <div class="">
             <div class="row top_tiles">
-              <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
+              <div class="animated flipInY col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="tile-stats">
                   <div class="icon"><i class="fa fa-image"></i></div>
                   <div class="count">15</div>
@@ -10,15 +10,7 @@
                   <p>Lorem ipsum psdea itgum rixt.</p>
                 </div>
               </div>
-              <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="tile-stats">
-                  <div class="icon"><i class="fa fa-music"></i></div>
-                  <div class="count">30</div>
-                  <h3>Jumlah Musik</h3>
-                  <p>Lorem ipsum psdea itgum rixt.</p>
-                </div>
-              </div>
-              <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
+              <div class="animated flipInY col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="tile-stats">
                   <div class="icon"><i class="fa fa-film"></i></div>
                   <div class="count">10</div>

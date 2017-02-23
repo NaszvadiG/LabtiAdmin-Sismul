@@ -21,12 +21,27 @@ class m_admin extends CI_Model{
     }
 
     public function getAllGambar(){
-    	$query = $this->db->get_where('post', array('kategori' => 'gambar'));
+
+        $this->db->select('*');
+        $this->db->from('post');
+        $this->db->join('user', 'user.id = post.user_id');
+        $this->db->where('kategori','gambar');
+        $query = $this->db->get();
+    	//$query = $this->db->get_where('post', array('kategori' => 'gambar'));
     	return $query->result();
     }
 
     public function getAllVIdeo(){
-        $query = $this->db->get_where('post', array('kategori' => 'video'));
+        $this->db->select('*');
+        $this->db->from('post');
+        $this->db->join('user', 'user.id = post.user_id');
+        $this->db->where('kategori','video');
+        $query = $this->db->get();
         return $query->result();
+    }
+
+    public function delete($itemId){
+        $this->db->delete('post', array('id_post' => $itemId));
+        return true;
     }
 }
