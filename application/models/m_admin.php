@@ -20,8 +20,13 @@ class m_admin extends CI_Model{
 		return $insert_data;
     }
 
-    public function getAllGambar($user_id){
-    	$query = $this->db->get_where('post', array('user_id' => $user_id));
+    public function getAllGambar(){
+    	$query = $this->db->get_where('post', array('kategori' => 'gambar'));
     	return $query->result();
+    }
+
+    public function getAllVIdeo(){
+        $query = $this->db->get_where('post', array('kategori' => 'video'));
+        return $query->result();
     }
 }

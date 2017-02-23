@@ -26,10 +26,9 @@ class Welcome extends CI_Controller {
 
 	public function gambar()
 	{
-		$user_id = 3; //sementara
 		$data['content']	= 'admin/gambar';
 		$data['judul']		= 'Gambar';
-		$data['item']       = $this->m_admin->getAllGambar($user_id);
+		$data['item']       = $this->m_admin->getAllGambar();
 		$this->load->view('Admin/core/content',$data);
 	}
 
