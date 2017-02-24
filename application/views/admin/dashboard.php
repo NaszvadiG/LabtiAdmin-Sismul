@@ -5,17 +5,17 @@
               <div class="animated flipInY col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="tile-stats">
                   <div class="icon"><i class="fa fa-image"></i></div>
-                  <div class="count">15</div>
+                  <div class="count"><?php echo $jlhGambar ?></div>
                   <h3>Jumlah Gambar</h3>
-                  <p>Lorem ipsum psdea itgum rixt.</p>
+                  <p>Jumlah gambar dari semua pengguna</p>
                 </div>
               </div>
               <div class="animated flipInY col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="tile-stats">
                   <div class="icon"><i class="fa fa-film"></i></div>
-                  <div class="count">10</div>
+                  <div class="count"><?php echo $jlhVideo ?></div>
                   <h3>Jumlah Video</h3>
-                  <p>Lorem ipsum psdea itgum rixt.</p>
+                  <p>Jumlah video dari semua pengguna</p>
                 </div>
               </div>
             </div>
@@ -42,7 +42,7 @@
 
                     <!-- ISI CONTENT  -->
                     <div class="text-center">
-                      <h1>Selamat Datang Admin</h1>
+                      <h1>Selamat Datang <?php echo $userData->name ?></h1>
                     </div>
                   </div>
                 </div>

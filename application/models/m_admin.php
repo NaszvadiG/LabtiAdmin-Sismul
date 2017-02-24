@@ -2,26 +2,14 @@
 
 class m_admin extends CI_Model{
 
-
-	public function gamabarUpload($user_id){
-        $itemUpload		= $this->upload->data();
-        $namaFile		= $itemUpload['file_name'];
-        //$tipeGambar 	= $itemUpload['file_type'];
-        $data = array(
-                      
-            'user_id'       => $user_id,
-			'judul'	    	=> $namaFile,
-			'deskripsi' 	=> $this->input->post('deskripsi'),
-			'kategori' 		=> "gambar",
-			'nama_file'     => $namaFile
-    
-		);
-		$insert_data = $this->db->insert('post',$data);
-		return $insert_data;
+    public function getUser($username)
+    {
+        $query = $this->db->get_where('user', array('username' => $username));
+        return $query->row();
     }
 
-    public function getAllGambar(){
-
+    public function getAllGambar()
+    {
         $this->db->select('*');
         $this->db->from('post');
         $this->db->join('user', 'user.id = post.user_id');
@@ -31,7 +19,8 @@ class m_admin extends CI_Model{
     	return $query->result();
     }
 
-    public function getAllVIdeo(){
+    public function getAllVIdeo()
+    {
         $this->db->select('*');
         $this->db->from('post');
         $this->db->join('user', 'user.id = post.user_id');
@@ -40,7 +29,16 @@ class m_admin extends CI_Model{
         return $query->result();
     }
 
-    public function delete($itemId){
+    public function countItem($kategori)
+    {
+        $this->db->where('kategori',$kategori);
+        $this->db->from('post');
+        $hitung = $this->db->count_all_results();
+        return $hitung;
+    }
+
+    public function delete($itemId)
+    {
         $this->db->delete('post', array('id_post' => $itemId));
         return true;
     }

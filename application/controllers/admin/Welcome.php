@@ -13,13 +13,18 @@ class Welcome extends CI_Controller {
         }else{
           redirect('welcome');
         }
+
+        
 	}
 
 	public function index()
 	{
-
+		$username = $this->session->userdata('username');
+		$data['userData'] = $this->m_admin->getUser($username);
 		$data['content']	= 'admin/dashboard';
 		$data['judul']		= 'Dashboard';
+		$data['jlhGambar'] = $this->m_admin->countItem('gambar');
+		$data['jlhVideo'] = $this->m_admin->countItem('video');
 		$this->load->view('Admin/core/content',$data);
 	}
 
